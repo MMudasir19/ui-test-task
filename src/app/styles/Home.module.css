@@ -1,0 +1,111 @@
+/* Basic Container Styles */
+.container {
+  padding: 1.5rem;
+  font-family: "Arial", sans-serif;
+}
+
+/* Header Styles */
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #393939;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #585858;
+  margin: 1rem 0rem;
+}
+
+.content {
+  margin-bottom: 1.5rem;
+}
+
+.itemsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: #121212;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 9rem;
+  color: #ffffff;
+}
+.card span {
+  width: 100%;
+}
+.card hr {
+  transform: rotate(90deg);
+  width: 20%;
+  height: 1px;
+}
+.card button {
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+  padding: 0.1rem 0.2rem;
+}
+
+/* No Items Message */
+.noItems {
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 0.6rem;
+}
+
+/* Button Styles */
+.footer {
+  margin-top: 2.5rem;
+}
+
+.footerButton {
+  padding: 0.5rem 1.5rem;
+  background-color: #519f03;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.footerButton:hover {
+  background-color: #488d03;
+  transition: background-color 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 1.25rem;
+  }
+
+  .content h2 {
+    font-size: 1.25rem;
+  }
+
+  .noItems {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 150px;
+  }
+}

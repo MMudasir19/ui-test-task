@@ -1,0 +1,115 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #2d3748; /* bg-gray-800 */
+  color: white;
+}
+
+.navbarLeft {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.a {
+  text-decoration: none;
+  font-size: 0.8rem; /* Adjust font size */
+  color: white;
+  display: flex;
+  align-items: center; /* Align icons with text */
+}
+
+.a:hover {
+  text-decoration: underline;
+}
+
+.a i {
+  margin-right: 0.2rem;
+}
+
+.navbarAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.navbarAvatarDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbarAvatar img {
+  width: 60%;
+}
+
+.navbarMenuIcon {
+  display: none; /* Show menu icon below 600px */
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Drawer styles */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Initially hide the drawer off-screen */
+  width: 30%;
+  height: 100%;
+  background-color: #2d3748; /* Same as navbar background */
+  color: white;
+  padding: 1rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.4s ease-in-out; /* Transition effect for sliding */
+}
+
+.drawer.open {
+  right: 0; /* Slide in the drawer when it's open */
+}
+
+.drawerCloseIcon {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 24px;
+}
+
+.drawerLinks {
+  list-style-type: none;
+  padding: 0;
+}
+
+.drawerLinks li {
+  margin: 10px 0;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .navbarLinks {
+    display: none; /* Hide links on small screens */
+  }
+
+  .navbarLeft h1 {
+    margin-right: auto; /* Align the title to the left */
+  }
+
+  .navbarMenuIcon {
+    display: block; /* Show menu icon below 600px */
+  }
+}

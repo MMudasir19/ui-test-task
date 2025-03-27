@@ -1,0 +1,72 @@
+/* About.module.css */
+
+.container {
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.content {
+  margin-bottom: 40px;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  color: #2e3d49;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.content strong {
+  font-weight: bold;
+}
+
+.team {
+  margin-bottom: 40px;
+}
+
+.team h2 {
+  font-size: 1.5rem;
+  color: #2e3d49;
+  margin-bottom: 10px;
+}
+
+.team ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.team li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.footer a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

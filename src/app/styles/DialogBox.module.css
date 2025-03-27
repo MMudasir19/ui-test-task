@@ -1,0 +1,172 @@
+.dialog {
+  border-radius: 0.5rem;
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 2rem;
+  background-color: #373737;
+  color: white;
+}
+
+.dialogHeading {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.dialogHeading button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  padding: 0.1rem 0.2rem;
+}
+.dialogUpper {
+  display: flex;
+  width: 100%;
+  gap: 10%;
+}
+
+.filters {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  gap: 2%;
+}
+.filters label {
+  width: 4rem;
+}
+
+.input,
+.select {
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.2rem;
+  background-color: white;
+  color: #121212;
+  padding: 0rem 0.5rem;
+}
+
+.itemsArray {
+  width: 100%;
+  background: #121212;
+  margin: 1rem 0rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* Custom Scrollbar */
+.itemsArray::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.itemsArray::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.itemsArray::-webkit-scrollbar-thumb {
+  background: #a6a6a6;
+}
+
+.itemsArray::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
+.item {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.item input {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 1rem;
+  appearance: none;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.item input:checked {
+  background: #595959;
+  border-color: #595959;
+  position: relative;
+}
+
+.item input:checked::after {
+  content: "✔";
+  font-size: 0.9rem;
+  color: #fff;
+  position: absolute;
+  top: -2px;
+  left: 2px;
+}
+
+.disabledCheckbox {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.disabledCheckbox + label {
+  color: #aaa;
+}
+
+.errorMessage {
+  color: #d03b09;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.btnDiv {
+  display: flex;
+  align-items: center;
+}
+.button {
+  padding: 0.5rem 1.5rem;
+  background-color: #519f03;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #488d03;
+  transition: background-color 0.3s;
+}
+
+.cancelButton {
+  padding: 0.5rem 1.5rem;
+  background-color: #9f2903;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.cancelButton:hover {
+  background-color: #842404;
+  transition: background-color 0.3s;
+}
+
+@media (max-width: 900px) {
+  .dialog {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .dialogUpper {
+    flex-direction: column;
+  }
+  .select {
+    margin: 1rem 0rem;
+  }
+}
