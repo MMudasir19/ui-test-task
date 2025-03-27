@@ -13,11 +13,11 @@ const DialogBox: FC = () => {
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
   const [error, setError] = useState<string>(""); // Error message state
 
-  const { items } = useAppSelector((state) => state.selectItem);
+  const { items, isOpen } = useAppSelector((state) => state.selectItem);
 
   useEffect(() => {
     setSelectedItems(items);
-  }, [items]);
+  }, [items, isOpen]);
 
   const handleSaveSelection = () => {
     if (selectedItems.length === 0) {
@@ -59,6 +59,13 @@ const DialogBox: FC = () => {
   });
 
   const isMaxSelected = selectedItems.length >= 3;
+
+  const handleRemoveItem = (item: string) => {
+    const updatedItems = selectedItems.filter(
+      (currentItem) => currentItem !== item
+    );
+    setSelectedItems(updatedItems);
+  };
 
   return (
     <>
@@ -131,6 +138,24 @@ const DialogBox: FC = () => {
               );
             })
           )}
+        </div>
+        <div>
+          <div className={styles.currentSelected}>Current Selected Items:</div>
+          <section className={styles.content}>
+            <div className={styles.itemsList}>
+              {selectedItems.length > 0 ? (
+                selectedItems.map((item, index) => (
+                  <div key={index} className={styles.card}>
+                    <span>{item}</span>
+                    <hr />
+                    <button onClick={() => handleRemoveItem(item)}>X</button>
+                  </div>
+                ))
+              ) : (
+                <p className={styles.noItems}>No items selected yet.</p>
+              )}
+            </div>
+          </section>
         </div>
 
         {/* buttons */}

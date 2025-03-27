@@ -38,7 +38,12 @@ const Navbar = () => {
         <div className={styles.navbarAvatarDiv}>
           {/* Right container with the avatar */}
           <div className={styles.navbarAvatar}>
-            <Image src="/vercel.svg" alt="User Avatar" />
+            <Image
+              src="/vercel.svg"
+              alt="User Avatar"
+              width={100}
+              height={100}
+            />
           </div>
           {/* Menu Icon */}
           <div

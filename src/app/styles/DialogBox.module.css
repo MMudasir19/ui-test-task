@@ -121,6 +121,52 @@
   font-size: 1rem;
   margin-top: 1rem;
 }
+.currentSelected {
+  margin-bottom: 1rem;
+}
+
+.content {
+  margin-bottom: 1.5rem;
+}
+
+.itemsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: #121212;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 9rem;
+  color: #ffffff;
+}
+.card span {
+  width: 100%;
+}
+.card hr {
+  transform: rotate(90deg);
+  width: 20%;
+  height: 1px;
+}
+.card button {
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+  padding: 0.1rem 0.2rem;
+}
+
+/* No Items Message */
+.noItems {
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 0.6rem;
+}
 
 .btnDiv {
   display: flex;
